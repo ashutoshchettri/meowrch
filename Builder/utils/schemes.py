@@ -1,11 +1,5 @@
 from dataclasses import dataclass, field
 from typing import List
-from enum import Enum
-
-
-class AurHelper(Enum):
-    YAY = "yay"
-    PARU = "paru"
 
 
 @dataclass
@@ -37,10 +31,9 @@ class PackageInfo:
 
 @dataclass
 class BuildOptions:
-    make_backup: bool
     install_bspwm: bool
     install_hyprland: bool
-    aur_helper: AurHelper
+    make_backup: bool
     enable_multilib: bool
     update_arch_database: bool
     install_drivers: bool
